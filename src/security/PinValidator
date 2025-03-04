@@ -1,0 +1,15 @@
+package security;
+
+public class PinValidator {
+    private String storedpin = "1234";
+
+    public boolean verifypin(String inputpin) {
+        return storedpin.equals(inputpin);
+    }
+
+    public static class FormatChecker {
+        public boolean isvalid(String pin) {
+            return pin.length() == 4 && pin.matches("\\d+");
+        }
+    }
+}
