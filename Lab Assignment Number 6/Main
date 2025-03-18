@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        Employe hod1 = new Employe("Sian ", "HOD");
+        Employe hod2 = new Employe("ali", "HOD");
+
+        Employe[] professors1 = { new Employe("Prof. kl", "Professor"), new Employe("rtrtrt", "Professor") };
+        Employe[] professors2 = { new Employe("Prof. klkl", "Professor"), new Employe("Mk", "Professor") };
+
+        Lab[] labs1 = { new Lab("CS Lab", new Employe("Lab Assistant 1", "Assistant"), new SystemUnit[2], true) };
+        Lab[] labs2 = { new Lab("Physics Lab", new Employe("Lab Assistant 2", "Assistant"), new SystemUnit[2], false) };
+
+        Department dept1 = new Department(hod1, "Computer Science", labs1, professors1);
+        Department dept2 = new Department(hod2, "Physics", labs2, professors2);
+
+        Department[] departments = { dept1, dept2 };
+
+        University university = new University("Tech University", departments);
+
+        System.out.println(university.toString());
+    }
+}
