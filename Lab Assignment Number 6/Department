@@ -1,0 +1,57 @@
+import java.util.Arrays;
+
+public class Department {
+    private Employe hod;
+    private String name;
+    private Lab[] labs;
+    private Employe[] professors;
+
+    public Department(Employe hod, String name, Lab[] labs, Employe[] professors) {
+        this.hod = hod;
+        this.name = name;
+        this.labs = labs;
+        this.professors = professors;
+    }
+
+    public Employe getHod() {
+        return hod;
+    }
+
+    public void setHod(Employe hod) {
+        this.hod = hod;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Lab[] getLabs() {
+        return labs;
+    }
+
+    public void setLabs(Lab[] labs) {
+        this.labs = labs;
+    }
+
+    public Employe[] getProfessors() {
+        return professors;
+    }
+
+    public void setProfessors(Employe[] professors) {
+        this.professors = professors;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Department Name: ").append(name)
+          .append(", HOD: ").append(hod)
+          .append(", Labs: ").append(Arrays.toString(labs))
+          .append(", Professors: ").append(Arrays.toString(professors));
+        return sb.toString();
+    }
+}
