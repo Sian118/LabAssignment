@@ -1,0 +1,55 @@
+public class Lab {
+    private String name;
+    private Employe labStaff;
+    private SystemUnit[] Dead;
+    private boolean multimedia;
+
+    public Lab(String name, Employe labStaff, SystemUnit[] Dead, boolean multimedia) {
+        this.name = name;
+        this.labStaff = labStaff;
+        this.Dead = Dead;
+        this.multimedia = multimedia;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Employe getLabStaff() {
+        return labStaff;
+    }
+
+    public SystemUnit[] getDead() {
+        return Dead;
+    }
+
+    public boolean isMultimedia() {
+        return multimedia;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLabStaff(Employe labStaff) {
+        this.labStaff = labStaff;
+    }
+
+    public void setDead(SystemUnit[] Dead) {
+        this.Dead = Dead;
+    }
+
+    public void setMultimedia(boolean multimedia) {
+        this.multimedia = multimedia;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Lab Name: ").append(name)
+          .append(", Lab Staff: ").append(labStaff)
+          .append(", Systems: ").append(Dead.length)
+          .append(", Multimedia: ").append(multimedia);
+        return sb.toString();
+    }
+}
