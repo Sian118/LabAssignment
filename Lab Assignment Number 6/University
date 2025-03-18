@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+public class University {
+    private String universityName;
+    private Department[] departments;
+
+    public University(String universityName, Department[] departments) {
+        this.universityName = universityName;
+        this.departments = departments;
+    }
+
+    public String getUniversityName() {
+        return universityName;
+    }
+
+    public void setUniversityName(String universityName) {
+        this.universityName = universityName;
+    }
+
+    public Department[] getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Department[] departments) {
+        this.departments = departments;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("University Name: ").append(universityName)
+          .append(", Departments: ").append(Arrays.toString(departments));
+        return sb.toString();
+    }
+}
